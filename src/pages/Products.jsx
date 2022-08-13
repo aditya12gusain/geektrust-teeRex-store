@@ -13,7 +13,7 @@ import ProductsList from '../components/ProductsList';
 import { DefaultState } from '../context/DefaultContext';
 
 const Products = () => {
-  const { setSearchString } = DefaultState();
+  const { setSearchString, searchString } = DefaultState();
 
   return (
     <DefaultHoc>
@@ -28,6 +28,7 @@ const Products = () => {
               variant="flushed"
               placeholder="Find products by name, color, type"
               onChange={e => setSearchString(e.target.value)}
+              value={searchString}
             />
           </InputGroup>
           {/* <Button variant={'solid'} minWidth={'100px'}>
