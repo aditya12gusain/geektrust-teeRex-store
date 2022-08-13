@@ -10,11 +10,12 @@ const ProductsList = () => {
     <Grid
       templateColumns={{
         base: 'repeat(1, 1fr)',
+        sm: 'repeat(2, 1fr)',
         md: 'repeat(3, 1fr)',
         lg: 'repeat(5, 1fr)',
       }}
       gap={5}
-      margin={'40px 0'}
+      margin={{ base: '40px 30px', sm: '40px 15px', md: '40px 0' }}
     >
       {searchString.length > 0 || searchResult ? (
         searchResult.length === 0 ? (

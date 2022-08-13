@@ -1,4 +1,4 @@
-import { Box, useToast } from '@chakra-ui/react';
+import { Box, Image, useToast } from '@chakra-ui/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
@@ -22,8 +22,18 @@ const Navbar = () => {
       padding={'0 30px'}
       fontFamily={'sans-serif'}
     >
-      <Link to="/" style={{ fontSize: '20px', letterSpacing: '1px' }}>
-        Teerex
+      <Link
+        to="/"
+        style={{
+          fontSize: '20px',
+          letterSpacing: '1px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '10px',
+        }}
+      >
+        <Image src="./teerexLogo.png" boxSize={'25px'} /> Teerex
       </Link>
       <Box display="flex" alignItems={'center'} gap={'15px'}>
         <Box display={{ base: 'none', md: 'block' }}>
